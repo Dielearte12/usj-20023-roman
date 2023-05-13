@@ -1,31 +1,3 @@
-Skip to content
-
-Search or jump to...
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@Dielearte12 
-dcoloma
-/
-usj-2023-triangle
-Public
-Fork your own copy of dcoloma/usj-2023-triangle
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-Deploy static content to Pages
-First CI version #1
-Jobs
-Run details
-Workflow file for this run
-.github/workflows/main.yml at ba1bd3e
 # Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
@@ -68,4 +40,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-First CI version · dcoloma/usj-2023-triangle@ba1bd3e 
