@@ -1,3 +1,31 @@
+Skip to content
+
+Search or jump to...
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@Dielearte12 
+dcoloma
+/
+usj-2023-triangle
+Public
+Fork your own copy of dcoloma/usj-2023-triangle
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+Deploy static content to Pages
+First CI version #1
+Jobs
+Run details
+Workflow file for this run
+.github/workflows/main.yml at ba1bd3e
 # Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
@@ -22,42 +50,11 @@ concurrency:
 
 jobs:
 
-  test:
-    runs-on: ubuntu-latest
-    needs: lint
-    steps:
-      - uses: actions/checkout@v3
-      # Runs a single command using the runners shell
-      - name: Set-up Node
-        uses: actions/setup-node@v1
-        with: 
-         node-version: 10.x
-      - name: Install Dependencies
-        run: | 
-          npm install --save-dev node-qunit-phantomjs
-          npm install --save-dev qunit
-      - name: Test
-        run: node_modules/node-qunit-phantomjs/bin/node-qunit-phantomjs test.html 
-        
-  lint:
-    runs-on: ubuntu-latest   
-    steps:
-      - uses: actions/checkout@v3
-      - name: Set-up Node
-        uses: actions/setup-node@v1
-        with: 
-         node-version: 10.x
-      - name: Install Dependencies
-        run: npm i eslint@5.16.0
-      - name: Lint
-        run: node_modules/eslint/bin/eslint.js romans.js  
-
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: test
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -71,3 +68,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+First CI version · dcoloma/usj-2023-triangle@ba1bd3e 
